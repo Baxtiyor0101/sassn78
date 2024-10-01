@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/css/minified/main.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <a href="#">Services</a>
+          <ul>
+            <li><a href="#">Service 1</a></li>
+            <li><a href="#">Service 2</a></li>
+            <li><a href="#">Service 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <form>
+        <input type="text" placeholder="Search..." />
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+    <div class="contact">
+      <h2>Lorem</h2>
+      <h2>Lorem</h2>
+      <h2>Lorem</h2>
+      <h2>Lorem</h2>
+      <h2>Lorem</h2>
+      <button class="main_btn">see more</button>
+    </div>
+    <main>
+      <section>
+        <h1>Welcome to Our Website!</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor
+          neque sit amet mi ultrices, ac pharetra ipsum dignissim. Sed vel enim
+          vel arcu semper laoreet. Integer id finibus lectus, sed ullamcorper
+          neque. Donec vitae malesuada ligula. Vestibulum vel diam vel enim
+          pellentesque facilisis.
+        </p>
+        <button class="section_btb">go somewhere</button>
+      </section>
+      <section>
+        <h2 class="my-5">Our Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor
+          neque sit amet mi ultrices, ac pharetra ipsum dignissim. Sed vel enim
+          vel arcu semper laoreet. Integer id finibus lectus, sed ullamcorper
+          neque. Donec vitae malesuada ligula. Vestibulum vel diam vel enim
+          pellentesque facilisis.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2022 Your Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
+<!-- 
+
+
+  1. Color Functions
+Color manipulation is one of the most powerful features in SASS. You can lighten, darken, adjust saturation, and manipulate colors dynamically.
+
+lighten($color, $amount): Lightens a color by a specified percentage.
+
+scss
+Copy code
+$light-blue: lighten(#3498db, 20%); // Lightens the blue color by 20%
+darken($color, $amount): Darkens a color by a specified percentage.
+
+scss
+Copy code
+$dark-blue: darken(#3498db, 20%);
+saturate($color, $amount): Increases the saturation of a color.
+
+scss
+Copy code
+$saturated-color: saturate(#3498db, 30%);
+desaturate($color, $amount): Decreases the saturation of a color.
+
+scss
+Copy code
+$desaturated-color: desaturate(#3498db, 30%);
+adjust-hue($color, $degrees): Rotates the color wheel by a specified number of degrees.
+
+scss
+Copy code
+$adjusted-hue: adjust-hue(#3498db, 40deg); // Changes hue by 40 degrees
+rgba($color, $alpha): Adds or modifies the alpha (transparency) channel of a color.
+
+scss
+Copy code
+$transparent-blue: rgba(#3498db, 0.5); // 50% transparent blue
+mix($color1, $color2, [$weight]): Mixes two colors together by a certain weight.
+
+scss
+Copy code
+$mixed-color: mix(#3498db, #e74c3c, 50%); // 50% blend of blue and red
+2. Math Functions
+Math functions allow you to perform calculations directly in SASS.
+
+percentage($value): Converts a number to a percentage.
+
+scss
+Copy code
+$percent: percentage(0.5); // Converts 0.5 to 50%
+round($number): Rounds a number to the nearest whole number.
+
+scss
+Copy code
+$rounded: round(3.6); // 4
+ceil($number): Rounds a number up to the nearest whole number.
+
+scss
+Copy code
+$ceil: ceil(3.1); // 4
+floor($number): Rounds a number down to the nearest whole number.
+
+scss
+Copy code
+$floor: floor(3.9); // 3
+abs($number): Returns the absolute value of a number.
+
+scss
+Copy code
+$abs: abs(-10); // 10
+min($numbers...): Returns the smallest value from a list of numbers.
+
+scss
+Copy code
+$min: min(10px, 5px, 20px); // 5px
+max($numbers...): Returns the largest value from a list of numbers.
+
+scss
+Copy code
+$max: max(10px, 5px, 20px); // 20px
+random($limit): Returns a random number between 1 and the specified limit.
+
+scss
+Copy code
+$random-number: random(10); // Generates a random number between 1 and 10
+3. String Functions
+These functions help you manipulate and work with strings in SASS.
+
+quote($string): Adds quotes around a string.
+
+scss
+Copy code
+$quoted: quote(hello); // "hello"
+unquote($string): Removes quotes from a string.
+
+scss
+Copy code
+$unquoted: unquote("hello"); // hello
+str-length($string): Returns the length of a string.
+
+scss
+Copy code
+$length: str-length("hello"); // 5
+str-slice($string, $start, [$end]): Extracts a substring from a string.
+
+scss
+Copy code
+$slice: str-slice("hello", 2, 4); // "ell"
+to-upper-case($string): Converts a string to uppercase.
+
+scss
+Copy code
+$upper: to-upper-case("hello"); // "HELLO"
+to-lower-case($string): Converts a string to lowercase.
+
+scss
+Copy code
+$lower: to-lower-case("HELLO"); // "hello"
+4. List Functions
+List functions allow you to work with and manipulate lists of values.
+
+length($list): Returns the number of items in a list.
+
+scss
+Copy code
+$list: 10px 20px 30px;
+$length: length($list); // 3
+nth($list, $n): Returns the nth item in a list.
+
+scss
+Copy code
+$list: 10px 20px 30px;
+$second-item: nth($list, 2); // 20px
+join($list1, $list2, [$separator]): Joins two lists together.
+
+scss
+Copy code
+$list1: 10px 20px;
+$list2: 30px 40px;
+$joined: join($list1, $list2); // 10px 20px 30px 40px
+append($list, $value, [$separator]): Adds a value to the end of a list.
+
+scss
+Copy code
+$list: 10px 20px;
+$new-list: append($list, 30px); // 10px 20px 30px
+index($list, $value): Returns the position of a value in a list.
+
+scss
+Copy code
+$list: 10px 20px 30px;
+$index: index($list, 20px); // 2
+zip($lists...): Combines multiple lists into a list of lists.
+
+scss
+Copy code
+$list1: 1px 2px;
+$list2: red blue;
+$zipped: zip($list1, $list2); // (1px red) (2px blue)
+5. Map Functions
+Maps in SASS are key-value pairs, and these functions help you work with them.
+
+map-get($map, $key): Returns the value for a given key in a map.
+
+scss
+Copy code
+$colors: (primary: #ff4081, secondary: #e91e63);
+$primary-color: map-get($colors, primary); // #ff4081
+map-merge($map1, $map2): Merges two maps together.
+
+scss
+Copy code
+$colors: (primary: #ff4081, secondary: #e91e63);
+$new-colors: map-merge($colors, (success: #4caf50)); // (primary: #ff4081, secondary: #e91e63, success: #4caf50)
+map-remove($map, $keys...): Returns a map with one or more keys removed.
+
+scss
+Copy code
+$colors: (primary: #ff4081, secondary: #e91e63);
+$new-map: map-remove($colors, primary); // (secondary: #e91e63)
+map-has-key($map, $key): Returns true if the map contains the given key.
+
+scss
+Copy code
+$colors: (primary: #ff4081, secondary: #e91e63);
+$has-primary: map-has-key($colors, primary); // true
+6. Introspection Functions
+These functions help inspect values and types in SASS.
+
+type-of($value): Returns the type of a value.
+
+scss
+Copy code
+$type: type-of(10px); // number
+unit($number): Returns the unit of a number.
+
+scss
+Copy code
+$unit: unit(10px); // px
+unitless($number): Returns true if the number has no unit.
+
+scss
+Copy code
+$is-unitless: unitless(10); // true
+inspect($value): Returns the string representation of any value.
+
+scss
+Copy code
+$value: inspect(10px); // "10px"
+ -->
+
+<!-- build in functions -->
+<!-- lighten  -->
+<!-- darken -->
+
+<!-- functions
+        @function double($number){
+          @return $number*2
+        }
+        (padding:double(10px))
+
+
+        @function standartBorder($color,$tur){
+          @if($tur=="small"){
+            return 1px solid $$color
+          }@else if($tur=="medium"){
+            return 2px solid $$color
+          }
+          @else if($tur=="large"){
+            return 3px solid $$color
+          }
+        }
+-->
+
+<!-- loops
+@for $i from 0 to 6{
+  my-#{$i}{
+    margin-top:$i*0.5rem
+  }
+}
+-->
+
+<!-- 
+  map
+  $tomonlar:(
+    t:"top",
+    m:"middle",
+    b:"bottom"
+  )
+
+ -->
+
+<!-- mixin
+
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+
+  using
+  .button {
+  @include rounded-corners(10px);
+  background-color: #ff4081;
+  padding: 10px 20px;
+  color: white;
+}
+
+
+@mixin box-shadow($x: 0px, $y: 0px, $blur: 10px, $color: rgba(0, 0, 0, 0.5)) {
+  box-shadow: $x $y $blur $color;
+}
+
+.card {
+  @include box-shadow(5px, 5px);
+}
+
+}-->
+
+<!-- 
+  inheritance
+
+    .button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff4081;
+  color: white;
+}
+
+.alert {
+  @extend .button;
+  background-color: red;
+}
+ -->
+
+<!-- 
+  placeholder
+    %base-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button-primary {
+  @extend %base-button;
+  background-color: #ff4081;
+  color: white;
+}
+
+.button-secondary {
+  @extend %base-button;
+  background-color: #e0e0e0;
+  color: black;
+}
+  -->

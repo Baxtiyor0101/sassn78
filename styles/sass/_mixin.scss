@@ -1,0 +1,30 @@
+@mixin margin-left($number) {
+  margin-left: $number;
+  background-color: aqua;
+  padding: 10px;
+  &:hover {
+    background-color: lightblue;
+  }
+}
+
+@mixin border($color: red) {
+  border: 40px solid $color;
+  background-color: lightgray;
+  padding: 10px;
+  &:hover {
+    background-color: lightblue;
+  }
+}
+
+@mixin flexbox($name:column, $flex:flex) {
+  display: $flex;
+  flex-direction: $name;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: lightgray;
+  padding: 10px;
+  &:hover {
+    background-color: lightblue;
+  }
+}

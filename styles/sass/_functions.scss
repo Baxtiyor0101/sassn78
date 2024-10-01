@@ -1,0 +1,16 @@
+@function double($number) {
+  @return $number * 20px;
+}
+
+@function standartBorder($color, $type) {
+  @if ($type == "small") {
+    @return 1px solid darken($color, -10%);
+  } @else if($type == "medium") {
+    @return 5px solid lighten($color, -10%);
+  } @else if($type == "large") {
+    @return 10px solid darken($color, 35%);
+  } @else {
+    @return 5px solid darken($color, 35%);
+  }
+}
+

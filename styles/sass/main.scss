@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@import "navbar";
+@import "footer";
+@import "variables";
+@import "functions";
+@import "loops";
+@import "mixin";
+
+body {
+  background-color: darken($main_bg_color, 40);
+}
+
+main {
+  h1 {
+    @include border(red);
+    text-align: center;
+    color: #000;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    margin-top: map-get($tomonlar, mainpx);
+    padding: double(2);
+    // border: standartBorder(rgb(126, 209, 26), "large");
+  }
+}
+
+h2 {
+  @include border();
+  text-align: center;
+  color: #fff;
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+  margin-top: map-get($tomonlar, mainpx);
+  padding: double(2);
+  // border: standartBorder(rgb(126, 209, 26), "large");
+}
+
+.contact {
+  @include flexbox();
+}
+
+.main_btn {
+  color: #000;
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #ccc;
+  }
+  &:active {
+    background-color: #999;
+  }
+}
+
+.section_btb {
+  @extend .main_btn;
+  background-color: #dd4646;
+}
+
+%fonts {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #fff;
+  font-family: sans-serif;
+  line-height: normal;
+  text-align: center;
+}
+
+
+h2 {
+  @extend %fonts;
+}

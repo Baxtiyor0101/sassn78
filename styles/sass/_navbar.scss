@@ -1,0 +1,54 @@
+@import "variables";
+
+nav {
+  background-color: lighten($header_bg_color,  30);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul li {
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid black;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul li a {
+  color: $heading_color;
+  text-decoration: none;
+}
+
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    input[type="text"], input[type="email"], input[type="submit"] {
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    button{
+        padding: 10px 20px;
+        background-color: rgb(171, 158, 183);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

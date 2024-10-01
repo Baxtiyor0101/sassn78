@@ -1,0 +1,36 @@
+// .mt-1 {
+//   margin-top: 5px;
+// }
+// .mt-2{
+//     margin-top: 10px;
+// }
+
+// .mb-1 {
+//   margin-bottom: 5px;
+// }
+
+// .mb-2 {
+//   margin-bottom: 10px;
+// }
+
+// .pl-1 {
+//   padding-left: 5px;
+// }
+
+// .pl-2 {
+//   padding-left: 10px;
+// }
+
+// .pr-1 {
+//   padding-right: 5px;
+// }
+
+@for $i from 0 to 6 {
+  .my-#{$i} {
+    margin-top: $i * 5px;
+  }
+  .px-#{$i} {
+    padding-left: $i * 5px;
+    padding-right: $i * 5px;
+  }
+}
